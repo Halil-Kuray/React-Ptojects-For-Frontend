@@ -12,17 +12,10 @@ const Navbar = (
 
 
 
+// ReactDOM.render(
+//     Navbar,
+//     document.getElementById('root')
+//     )
 
-
-
-
-
-
-
-
-
-
-ReactDOM.render(
-    Navbar,
-    document.getElementById('root')
-    )
+// React version 18 
+ReactDOM.createRoot(document.getElementById('root')).render(Navbar)
