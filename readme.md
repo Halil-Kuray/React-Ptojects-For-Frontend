@@ -25,3 +25,36 @@ to tell it HOW to do each step.
 We have small pieces that we can put together to make something
 larger/greater than the individual pieces.
 -------------------------------------------------
+
+Quiz!
+
+1. What is a React component?
+One part of web page, which is like a lego item.
+A function that returns React elements. (UI)
+
+2. What's wrong with this code?
+```
+function myComponent() {
+    return (
+        <small>I'm tiny text!</small>
+    )
+}
+```
+Component/function naming must be PascalCase
+
+3. What's wrong with this code?
+```
+function Header() {
+    return (
+        <header>
+            <nav>
+                <img src="./react-logo.png" width="40px" />
+            </nav>
+        </header>
+    )
+}
+
+ReactDOM.render(Header(), document.getElementById("root"))
+```
+In render we dont call it as a function.  we need to write it like: <Header/>
+--------------------------------------------------------------------
