@@ -10,8 +10,13 @@ Challenge:
 function Header() {
     return (
         <header>
-            <nav>
-                <img src="./React-icon.svg.png" width="90px" />
+            <nav className="navbar">
+                <img src="./React-icon.svg.png" className="logo" />
+                <ul>
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     )
