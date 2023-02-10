@@ -54,4 +54,5 @@ function Page() {
     )
 }
 
-ReactDOM.render(<Page />, document.getElementById("root"))
+//ReactDOM.render(<Page />, document.getElementById("root"))
+ReactDOM.createRoot(document.getElementById('root')).render(<Page/>)
