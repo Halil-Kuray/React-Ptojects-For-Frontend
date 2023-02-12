@@ -1,18 +1,17 @@
 import React from "react";
 import logo from "../logo.svg"
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="contact-card">
-      <img src={logo} width="100px"/>
-      <h3>Mr. Whiskerson</h3>
+      <h3>{props.name}</h3>
       <div className="info-group">
         <img src={logo} width="100px" />
-        <p>(212) 555-1234</p>
+        <p>{props.phone} </p>
       </div>
       <div className="info-group">
         <img src={logo} width="100px" />
-        <p>mr.whiskaz@catnap.meow</p>
+        <p>{props.email} </p>
       </div>
     </div>
   );

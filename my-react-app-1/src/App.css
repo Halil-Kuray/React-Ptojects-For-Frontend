@@ -41,4 +41,7 @@
   background-color: cornflowerblue;
   font-size: 2rem;
 }
-
+.cats{
+  display: flex;
+  justify-content: space-around;
+}
