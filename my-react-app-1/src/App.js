@@ -5,6 +5,7 @@ import Joke from "./components/Joke"
 import jokesData from "./jokesData"
 import JokeMap from "./components/JokeMap"
 import './App.css';
+import ShopCard from "./components/ShopCard"
 
 function App() {
    return (
@@ -68,6 +69,12 @@ function App() {
         <section>
           <h2 style={{color:"red", margin:"25px"}}>In This Part Data Were Exported Via Props and Mapped .</h2>
           <JokeMap data={jokesData} />
+        </section>
+
+        <hr/>
+
+        <section>
+          <ShopCard/>
         </section>
     </article>
 )
