@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from './Header'
+import Meme from './Meme'
 
 export default function ProjectMeme() {
   return (
     <article>
         <Header/>
+        <Meme/>
     </article>
   )
 }
