@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Meme () {
 
-    function handleClick(){
+    function handleClick(e){
+        e.preventDefault()
         console.log("I was clicked!")
     }
 
