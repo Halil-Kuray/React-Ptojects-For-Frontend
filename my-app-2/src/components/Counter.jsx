@@ -4,7 +4,10 @@ export default function Counter() {
     const [counter, setCounter] = useState(1)
 
     function increase() {
-        setCounter(counter + 1)
+        //setCounter(counter + 1)
+        setCounter(function (x) { // x is = to counter. boylece counter direkt fonksiyonumuza gecer.
+            return x+1
+        })
     }
 
     function decrease() {
@@ -14,7 +17,7 @@ export default function Counter() {
 
     return (
         <div className="counter">
-            <button onClick={decrease}>–</button>
+            <button onClick={decrease}>-</button>
             <div>
                 <h1>{counter}</h1>
             </div>
