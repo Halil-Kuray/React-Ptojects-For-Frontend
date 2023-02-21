@@ -56,3 +56,6 @@ form{
   flex-direction: column;
   background-color: cornflowerblue;
 }
+img{
+  margin:0 auto;
+}
