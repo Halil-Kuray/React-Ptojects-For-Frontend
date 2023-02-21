@@ -11,7 +11,8 @@ export default function Counter() {
     }
 
     function decrease() {
-        setCounter(counter - 1)
+        //setCounter(counter - 1)
+        setCounter(x => x - 1)
     }
 
 
