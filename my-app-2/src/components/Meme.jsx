@@ -1,14 +1,18 @@
 import React, {useState} from "react";
 
+
+
 export default function Meme(props) {
   const data = props.data.data.memes;
   let leng = data.length;
-  let randomNumber = Math.floor(Math.random() * leng);
-  let randomItem = data[randomNumber];
+  
+  const [randomItem, setRandomItem] = useState(data[1])
 
   function handleClick(e) {
     e.preventDefault();
-    console.table(randomItem);
+    let randomNumber = Math.floor(Math.random() * leng);
+    setRandomItem(data[randomNumber])
+    
   }
 
   return (
@@ -18,7 +22,7 @@ export default function Meme(props) {
         <input type="text" />
         <label>{randomItem.name}</label>
         <input type="text" />
-        <img src={randomItem.url} width={randomItem.width} height={randomItem.height} />
+        <img src={randomItem.url} width="800px" height="800px" />
         <button onClick={handleClick}> Get a new meme image</button>
       </form>
     </section>

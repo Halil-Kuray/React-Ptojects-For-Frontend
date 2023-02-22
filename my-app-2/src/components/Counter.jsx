@@ -6,7 +6,7 @@ export default function Counter() {
     function increase() {
         //setCounter(counter + 1)
         setCounter(function (x) { // x is = to counter. boylece counter direkt fonksiyonumuza gecer.
-            return x+1
+            return x+1              // x is the old value of state ALWAYS
         })
     }
 
@@ -18,11 +18,13 @@ export default function Counter() {
 
     return (
         <div className="counter">
-            <button onClick={decrease}>-</button>
+            <h2>Counter</h2>
+            <button onClick={increase}>+</button>
             <div>
                 <h1>{counter}</h1>
             </div>
-            <button onClick={increase}>+</button>
+            <button onClick={decrease}>-</button>
+            
         </div>
     )
 }
