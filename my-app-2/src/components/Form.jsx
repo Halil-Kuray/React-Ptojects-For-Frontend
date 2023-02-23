@@ -24,10 +24,16 @@ export default function Form() {
             }
         })
     }
-    console.log(formData.favColor)
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        //sumbitToApi(formData)
+        console.log(formData)
+
+    }
 
     return(
-        <form action="https://my-adress.com" method="POST" >
+        <form onSubmit={handleSubmit}>
 
                 
                 <input
@@ -119,6 +125,9 @@ export default function Form() {
                     <option value="indigo">Indigo</option>
                     <option value="violet">Violet</option>
                 </select>
+                <br />
+                <br />
+                <button>Submit</button>
         </form>
     )
 }
