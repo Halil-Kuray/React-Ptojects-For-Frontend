@@ -7,7 +7,8 @@ export default function Form() {
             lastName:"", 
             email:"", 
             comment:"",
-            isFriendly:true
+            isFriendly:true,
+            employment:""
         });
 
     function handleChange(event) {
@@ -66,6 +67,40 @@ export default function Form() {
                     onClick={handleChange}
                     name="isFriendly"
                 />
+
+
+                <fieldset>
+                    <legend>Current Employment Status</legend>
+                    <label htmlFor="unemplyed">Unemployed</label>
+                    <input 
+                        type="radio" 
+                        name="employment" 
+                        id="unemplyed"
+                        value="unemployed"
+                        onClick={handleChange}
+                        checked={formData.employment === "unemployed"}
+                    />
+                    <br />
+                    <label htmlFor="part-time">Part Time</label>
+                    <input 
+                        type="radio" 
+                        name="employment" 
+                        id="part-time"
+                        value="part-time"
+                        onClick={handleChange}
+                        checked={formData.employment === "part-time"}
+                    /> <br />
+                    <label htmlFor="full-time">Full Time</label>
+                    <input 
+                        type="radio" 
+                        name="employment" 
+                        id="full-time"
+                        value="full-time"
+                        onClick={handleChange}
+                        checked={formData.employment === "full-time"}
+
+                    />
+                </fieldset>
             
             
         </form>
