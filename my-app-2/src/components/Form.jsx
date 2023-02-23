@@ -1,14 +1,24 @@
 import React, {useState} from "react";
 
 export default function Form() {
-    const [formData, setFormData] = useState({ firstName:"", lastName:"", email:"", comment:""});
+    const [formData, setFormData] = useState(
+        { 
+            firstName:"", 
+            lastName:"", 
+            email:"", 
+            comment:"",
+            isFriendly:true
+        });
 
     function handleChange(event) {
+
+        const {name, value, type, checked} = event.target
+        //Object destructuring. INSTEAD OF event.target.name, event.target. value, event.target.type ...
 
         setFormData(prevFormData => {
             return{
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: type === "checkbox"? checked: value
             }
         })
         console.log(formData)
@@ -47,6 +57,14 @@ export default function Form() {
                     placeholder="Your Comment" 
                     onChange={handleChange} 
                     value={formData.comment} cols="30" rows="10"
+                />
+                <label htmlFor="isFriendly">Are you friendly?</label>
+                <input 
+                    type="checkbox"
+                    id="isFriendly"
+                    checked={formData.isFriendly}// instead of value this time we need to use checked
+                    onClick={handleChange}
+                    name="isFriendly"
                 />
             
             
